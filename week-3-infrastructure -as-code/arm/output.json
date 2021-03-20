@@ -1,0 +1,174 @@
+{
+    "id": "/subscriptions/b8d15010-b866-499f-837d-6ac6c7ef2689/resourceGroups/devopsbootcampw3/providers/Microsoft.Resources/deployments/template",
+    "location": null,
+    "name": "template",
+    "properties": {
+      "correlationId": "6884951b-985b-4665-8460-1ce9ba948687",
+      "debugSetting": null,
+      "dependencies": [
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/b8d15010-b866-499f-837d-6ac6c7ef2689/resourceGroups/devopsbootcampw3/providers/Microsoft.Network/publicIPAddresses/opervm01-PublicIP",
+              "resourceGroup": "devopsbootcampw3",
+              "resourceName": "opervm01-PublicIP",
+              "resourceType": "Microsoft.Network/publicIPAddresses"
+            },
+            {
+              "id": "/subscriptions/b8d15010-b866-499f-837d-6ac6c7ef2689/resourceGroups/devopsbootcampw3/providers/Microsoft.Network/virtualNetworks/opervm01-VirtualNetwork",
+              "resourceGroup": "devopsbootcampw3",
+              "resourceName": "opervm01-VirtualNetwork",
+              "resourceType": "Microsoft.Network/virtualNetworks"
+            }
+          ],
+          "id": "/subscriptions/b8d15010-b866-499f-837d-6ac6c7ef2689/resourceGroups/devopsbootcampw3/providers/Microsoft.Network/networkInterfaces/opervm01-NetworkInterface",
+          "resourceGroup": "devopsbootcampw3",
+          "resourceName": "opervm01-NetworkInterface",
+          "resourceType": "Microsoft.Network/networkInterfaces"
+        },
+        {
+          "dependsOn": [
+            {
+              "id": "/subscriptions/b8d15010-b866-499f-837d-6ac6c7ef2689/resourceGroups/devopsbootcampw3/providers/Microsoft.Storage/storageAccounts/opervm01storage",
+              "resourceGroup": "devopsbootcampw3",
+              "resourceName": "opervm01storage",
+              "resourceType": "Microsoft.Storage/storageAccounts"
+            },
+            {
+              "id": "/subscriptions/b8d15010-b866-499f-837d-6ac6c7ef2689/resourceGroups/devopsbootcampw3/providers/Microsoft.Network/networkInterfaces/opervm01-NetworkInterface",
+              "resourceGroup": "devopsbootcampw3",
+              "resourceName": "opervm01-NetworkInterface",
+              "resourceType": "Microsoft.Network/networkInterfaces"
+            }
+          ],
+          "id": "/subscriptions/b8d15010-b866-499f-837d-6ac6c7ef2689/resourceGroups/devopsbootcampw3/providers/Microsoft.Compute/virtualMachines/opervm01",
+          "resourceGroup": "devopsbootcampw3",
+          "resourceName": "opervm01",
+          "resourceType": "Microsoft.Compute/virtualMachines"
+        }
+      ],
+      "duration": "PT43.0409161S",
+      "error": null,
+      "mode": "Incremental",
+      "onErrorDeployment": null,
+      "outputResources": [
+        {
+          "id": "/subscriptions/b8d15010-b866-499f-837d-6ac6c7ef2689/resourceGroups/devopsbootcampw3/providers/Microsoft.Compute/virtualMachines/opervm01",
+          "resourceGroup": "devopsbootcampw3"
+        },
+        {
+          "id": "/subscriptions/b8d15010-b866-499f-837d-6ac6c7ef2689/resourceGroups/devopsbootcampw3/providers/Microsoft.Network/networkInterfaces/opervm01-NetworkInterface",
+          "resourceGroup": "devopsbootcampw3"
+        },
+        {
+          "id": "/subscriptions/b8d15010-b866-499f-837d-6ac6c7ef2689/resourceGroups/devopsbootcampw3/providers/Microsoft.Network/publicIPAddresses/opervm01-PublicIP",
+          "resourceGroup": "devopsbootcampw3"
+        },
+        {
+          "id": "/subscriptions/b8d15010-b866-499f-837d-6ac6c7ef2689/resourceGroups/devopsbootcampw3/providers/Microsoft.Network/virtualNetworks/opervm01-VirtualNetwork",
+          "resourceGroup": "devopsbootcampw3"
+        },
+        {
+          "id": "/subscriptions/b8d15010-b866-499f-837d-6ac6c7ef2689/resourceGroups/devopsbootcampw3/providers/Microsoft.Storage/storageAccounts/opervm01storage",
+          "resourceGroup": "devopsbootcampw3"
+        }
+      ],
+      "outputs": {
+        "publicIP": {
+          "type": "String",
+          "value": "opervm01.westeurope.cloudapp.azure.com"
+        }
+      },
+      "parameters": {
+        "adminPassword": {
+          "type": "String",
+          "value": "humlepung123!"
+        }
+      },
+      "parametersLink": null,
+      "providers": [
+        {
+          "id": null,
+          "namespace": "Microsoft.Storage",
+          "registrationPolicy": null,
+          "registrationState": null,
+          "resourceTypes": [
+            {
+              "aliases": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "locations": [
+                "westeurope"
+              ],
+              "properties": null,
+              "resourceType": "storageAccounts"
+            }
+          ]
+        },
+        {
+          "id": null,
+          "namespace": "Microsoft.Network",
+          "registrationPolicy": null,
+          "registrationState": null,
+          "resourceTypes": [
+            {
+              "aliases": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "locations": [
+                "westeurope"
+              ],
+              "properties": null,
+              "resourceType": "publicIPAddresses"
+            },
+            {
+              "aliases": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "locations": [
+                "westeurope"
+              ],
+              "properties": null,
+              "resourceType": "virtualNetworks"
+            },
+            {
+              "aliases": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "locations": [
+                "westeurope"
+              ],
+              "properties": null,
+              "resourceType": "networkInterfaces"
+            }
+          ]
+        },
+        {
+          "id": null,
+          "namespace": "Microsoft.Compute",
+          "registrationPolicy": null,
+          "registrationState": null,
+          "resourceTypes": [
+            {
+              "aliases": null,
+              "apiVersions": null,
+              "capabilities": null,
+              "locations": [
+                "westeurope"
+              ],
+              "properties": null,
+              "resourceType": "virtualMachines"
+            }
+          ]
+        }
+      ],
+      "provisioningState": "Succeeded",
+      "templateHash": "11561699850406168213",
+      "templateLink": null,
+      "timestamp": "2021-03-05T18:13:21.256009+00:00",
+      "validatedResources": null
+    },
+    "resourceGroup": "devopsbootcampw3",
+    "tags": null,
+    "type": "Microsoft.Resources/deployments"
+  }
